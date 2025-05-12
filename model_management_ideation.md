@@ -1,4 +1,4 @@
-# Model Management
+# Model Management [Draft for ideation]
 ![Model Management](./model_management.png)
 
 ## Core components
