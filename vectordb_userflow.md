@@ -1,5 +1,7 @@
 # Vector DB Assistant [Concept for Ideation]
 ## Main flow
+### Wireframe
+![Vector DB Assistant](./VectorDB_chat.png)
 ![Vector DB Assistant](./vector_db_extension.png)
 
 ## Vector Database Management - Simple Preview
@@ -19,3 +21,5 @@
 
 ## Chat with Vector Database
 ![Chat with Vector Database](./chat.png)
+
+## High Level Architecture & Design [TODO]
