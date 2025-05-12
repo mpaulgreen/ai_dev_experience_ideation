@@ -1,7 +1,7 @@
 # Vector DB Assistant [Concept for Ideation]
 ## Main flow
-### Wireframe
-![Vector DB Assistant](./VectorDB_chat.png)
+## Wireframe
+![wireframe](wireframe_vector_db-1.png)
 
 ## Vector DB Assistant
 ![Vector DB Assistant](./vector_db_extension.png)

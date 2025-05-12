@@ -19,7 +19,7 @@ The ideation of these comcepts have assumed the following components will be dev
     * Local vector storage solutions.
     * Integrated embedding generation pipelines.
     * Functionality for semantic similarity searching.
-    * [Vector Database](https://github.com/mpaulgreen/ai_dev_experience_ideation/blob/main/vectordb_userflow.md)
+    * [Vector Database](https://github.com/mpaulgreen/ai_dev_experience_ideation/blob/main/vectordb_ideation.md)
 * **Prompt Development:**
     * Centralized management of prompt templates.
     * Version control for prompt iterations.

@@ -1,0 +1,202 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: sans-serif; font-size: 12px; font-weight: bold; fill: white; }
+      .subtitle { font-family: sans-serif; font-size: 9px; fill: #ccc; }
+      .label { font-family: sans-serif; font-size: 7px; fill: #aaa; }
+      .arrow { stroke: #444; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+      .arrow-return { stroke: #888; stroke-width: 1; fill: none; marker-end: url(#arrowhead-small); stroke-dasharray: 3,3; }
+      .main-screen { fill: #4A90E2; stroke: #357ABD; stroke-width: 2; }
+      .database-screen { fill: #5CB85C; stroke: #449D44; stroke-width: 2; }
+      .create-screen { fill: #9B59B6; stroke: #8E44AD; stroke-width: 2; }
+      .source-screen { fill: #F0AD4E; stroke: #D58512; stroke-width: 2; }
+      .chat-screen { fill: #E74C3C; stroke: #C0392B; stroke-width: 2; }
+      .process-screen { fill: #1E8BC3; stroke: #155E87; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#444" />
+    </marker>
+    <marker id="arrowhead-small" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#888" />
+    </marker>
+  </defs>
+
+  <!-- Main Extension Interface -->
+  <rect x="50" y="500" width="140" height="80" class="main-screen" rx="6" />
+  <text x="120" y="520" class="title" text-anchor="middle">VS Code Extension</text>
+  <text x="120" y="535" class="subtitle" text-anchor="middle">Main Interface</text>
+  <text x="55" y="548" class="label">• Vector Databases</text>
+  <text x="55" y="556" class="label">• Data Sources</text>
+  <text x="55" y="564" class="label">• Chat Interface</text>
+  <text x="55" y="572" class="label">• Navigation Sidebar</text>
+
+  <!-- Database Creation Flow -->
+  <rect x="250" y="50" width="130" height="70" class="create-screen" rx="6" />
+  <text x="315" y="70" class="title" text-anchor="middle">Vendor Selection</text>
+  <text x="315" y="83" class="subtitle" text-anchor="middle">Chroma & Milvus</text>
+  <text x="255" y="95" class="label">• Feature comparison</text>
+  <text x="255" y="102" class="label">• Vendor details</text>
+  <text x="255" y="109" class="label">• Best practices</text>
+
+  <rect x="420" y="50" width="130" height="70" class="create-screen" rx="6" />
+  <text x="485" y="70" class="title" text-anchor="middle">Connection Config</text>
+  <text x="485" y="83" class="subtitle" text-anchor="middle">Chroma Local</text>
+  <text x="425" y="95" class="label">• Database path</text>
+  <text x="425" y="102" class="label">• Memory settings</text>
+  <text x="425" y="109" class="label">• Performance config</text>
+
+  <rect x="590" y="50" width="130" height="70" class="create-screen" rx="6" />
+  <text x="655" y="70" class="title" text-anchor="middle">Review & Create</text>
+  <text x="655" y="83" class="subtitle" text-anchor="middle">Final step</text>
+  <text x="595" y="95" class="label">• Config summary</text>
+  <text x="595" y="102" class="label">• Ready to create</text>
+  <text x="595" y="109" class="label">• Create button</text>
+
+  <!-- Data Sources Flow -->
+  <rect x="250" y="200" width="130" height="70" class="source-screen" rx="6" />
+  <text x="315" y="220" class="title" text-anchor="middle">Sources Overview</text>
+  <text x="315" y="233" class="subtitle" text-anchor="middle">Management</text>
+  <text x="255" y="245" class="label">• Search/filter</text>
+  <text x="255" y="252" class="label">• List & detail views</text>
+  <text x="255" y="259" class="label">• Add new source</text>
+
+  <rect x="420" y="200" width="130" height="70" class="source-screen" rx="6" />
+  <text x="485" y="220" class="title" text-anchor="middle">Configure Sources</text>
+  <text x="485" y="233" class="subtitle" text-anchor="middle">Settings</text>
+  <text x="425" y="245" class="label">• Source settings</text>
+  <text x="425" y="252" class="label">• Edit/Delete</text>
+  <text x="425" y="259" class="label">• Dual-pane view</text>
+
+  <rect x="590" y="200" width="130" height="70" class="source-screen" rx="6" />
+  <text x="655" y="220" class="title" text-anchor="middle">Source Detail</text>
+  <text x="655" y="233" class="subtitle" text-anchor="middle">Single view</text>
+  <text x="595" y="245" class="label">• Statistics</text>
+  <text x="595" y="252" class="label">• Type-specific settings</text>
+  <text x="595" y="259" class="label">• Navigation</text>
+
+  <!-- Data Processing Flow -->
+  <rect x="250" y="350" width="130" height="70" class="process-screen" rx="6" />
+  <text x="315" y="370" class="title" text-anchor="middle">Preview & Verify</text>
+  <text x="315" y="383" class="subtitle" text-anchor="middle">File validation</text>
+  <text x="255" y="395" class="label">• File status check</text>
+  <text x="255" y="402" class="label">• Content preview</text>
+  <text x="255" y="409" class="label">• Error handling</text>
+
+  <rect x="420" y="350" width="130" height="70" class="process-screen" rx="6" />
+  <text x="485" y="370" class="title" text-anchor="middle">Chunking Strategy</text>
+  <text x="485" y="383" class="subtitle" text-anchor="middle">Recursive/Character</text>
+  <text x="425" y="395" class="label">• Strategy selection</text>
+  <text x="425" y="402" class="label">• Parameters config</text>
+  <text x="425" y="409" class="label">• Preview chunks</text>
+
+  <rect x="590" y="350" width="130" height="70" class="process-screen" rx="6" />
+  <text x="655" y="370" class="title" text-anchor="middle">Process Documents</text>
+  <text x="655" y="383" class="subtitle" text-anchor="middle">Final processing</text>
+  <text x="595" y="395" class="label">• Real-time progress</text>
+  <text x="595" y="402" class="label">• Error handling</text>
+  <text x="595" y="409" class="label">• Completion summary</text>
+
+  <!-- Chat Interface -->
+  <rect x="50" y="700" width="140" height="80" class="chat-screen" rx="6" />
+  <text x="120" y="720" class="title" text-anchor="middle">Chat Interface</text>
+  <text x="120" y="735" class="subtitle" text-anchor="middle">AI Assistant</text>
+  <text x="55" y="748" class="label">• Model selection</text>
+  <text x="55" y="756" class="label">• Database selection</text>
+  <text x="55" y="764" class="label">• Message history</text>
+  <text x="55" y="772" class="label">• File attachments</text>
+
+  <!-- Flow Arrows -->
+  <!-- Main to sections -->
+  <line x1="190" y1="520" x2="250" y2="85" class="arrow" />
+  <line x1="190" y1="540" x2="250" y2="235" class="arrow" />
+  <line x1="120" y1="580" x2="120" y2="700" class="arrow" />
+
+  <!-- Database creation flow -->
+  <line x1="380" y1="85" x2="420" y2="85" class="arrow" />
+  <line x1="550" y1="85" x2="590" y2="85" class="arrow" />
+
+  <!-- Data sources flow -->
+  <line x1="380" y1="235" x2="420" y2="235" class="arrow" />
+  <line x1="485" y1="270" x2="655" y2="200" class="arrow" />
+
+  <!-- Processing flow -->
+  <line x1="315" y1="270" x2="315" y2="350" class="arrow" />
+  <line x1="380" y1="385" x2="420" y2="385" class="arrow" />
+  <line x1="550" y1="385" x2="590" y2="385" class="arrow" />
+
+  <!-- Return flows -->
+  <line x1="590" y1="120" x2="190" y2="510" class="arrow-return" />
+  <line x1="655" y1="420" x2="190" y2="550" class="arrow-return" />
+
+  <!-- Complete flow for data sources -->
+  <line x1="315" y1="420" x2="315" y2="350" class="arrow" />
+  <line x1="485" y1="420" x2="485" y2="350" class="arrow" />
+  <line x1="655" y1="420" x2="655" y2="350" class="arrow" />
+
+  <!-- Title and Legend -->
+  <text x="800" y="30" class="title" font-size="16" text-anchor="middle">VS Code Vector DB Extension - Complete Flow</text>
+  
+  <rect x="850" y="50" width="200" height="150" fill="none" stroke="#666" stroke-width="1" />
+  <text x="950" y="70" class="title" text-anchor="middle">Legend</text>
+  
+  <rect x="860" y="80" width="15" height="10" class="main-screen" />
+  <text x="880" y="89" class="label">Main Interface</text>
+  
+  <rect x="860" y="95" width="15" height="10" class="create-screen" />
+  <text x="880" y="104" class="label">Database Creation</text>
+  
+  <rect x="860" y="110" width="15" height="10" class="source-screen" />
+  <text x="880" y="119" class="label">Data Sources</text>
+  
+  <rect x="860" y="125" width="15" height="10" class="process-screen" />
+  <text x="880" y="134" class="label">Processing</text>
+  
+  <rect x="860" y="140" width="15" height="10" class="chat-screen" />
+  <text x="880" y="149" class="label">Chat Interface</text>
+  
+  <line x1="860" y1="165" x2="920" y2="165" stroke="#444" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  <text x="925" y="169" class="label">Forward Flow</text>
+  
+  <line x1="860" y1="180" x2="920" y2="180" stroke="#888" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrowhead-small)" />
+  <text x="925" y="184" class="label">Return Flow</text>
+
+  <!-- User Journey Descriptions -->
+  <rect x="850" y="250" width="350" height="200" fill="none" stroke="#666" stroke-width="1" />
+  <text x="1025" y="270" class="title" text-anchor="middle">Key User Journeys</text>
+  
+  <text x="860" y="290" class="subtitle">1. Database Creation:</text>
+  <text x="865" y="305" class="label">• Select vendor (Chroma/Milvus)</text>
+  <text x="865" y="315" class="label">• Configure connection settings</text>
+  <text x="865" y="325" class="label">• Review and create database</text>
+  
+  <text x="860" y="345" class="subtitle">2. Data Source Management:</text>
+  <text x="865" y="360" class="label">• Add/configure data sources</text>
+  <text x="865" y="370" class="label">• Preview and verify files</text>
+  <text x="865" y="380" class="label">• Setup chunking strategy</text>
+  <text x="865" y="390" class="label">• Process documents</text>
+  
+  <text x="860" y="410" class="subtitle">3. AI Chat:</text>
+  <text x="865" y="425" class="label">• Select model and database</text>
+  <text x="865" y="435" class="label">• Chat with AI assistant</text>
+
+  <!-- Key Features -->
+  <rect x="850" y="480" width="350" height="150" fill="none" stroke="#666" stroke-width="1" />
+  <text x="1025" y="500" class="title" text-anchor="middle">Key Features</text>
+  
+  <text x="860" y="520" class="label">• Multi-vendor database support (Chroma, Milvus)</text>
+  <text x="860" y="535" class="label">• Flexible data source configuration</text>
+  <text x="860" y="550" class="label">• Advanced chunking strategies</text>
+  <text x="860" y="565" class="label">• Real-time processing with progress tracking</text>
+  <text x="860" y="580" class="label">• AI chat with vector search integration</text>
+  <text x="860" y="595" class="label">• Detailed source management and configuration</text>
+  <text x="860" y="610" class="label">• Preview and verification before processing</text>
+
+  <!-- Implementation Notes -->
+  <rect x="850" y="660" width="350" height="100" fill="none" stroke="#888" stroke-width="1" />
+  <text x="1025" y="680" class="title" text-anchor="middle">Implementation Notes</text>
+  
+  <text x="860" y="700" class="label">• All mockups follow VS Code UI patterns</text>
+  <text x="860" y="715" class="label">• Consistent color coding and navigation</text>
+  <text x="860" y="730" class="label">• Error handling and validation throughout</text>
+  <text x="860" y="745" class="label">• Real-time feedback and progress indicators</text>
+</svg>
