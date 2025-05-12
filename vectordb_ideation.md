@@ -2,22 +2,39 @@
 ## Main flow
 ### Wireframe
 ![Vector DB Assistant](./VectorDB_chat.png)
+
+## Vector DB Assistant
 ![Vector DB Assistant](./vector_db_extension.png)
 
-## Vector Database Management - Simple Preview
-### Simple Preview
-![Vector DB Management Simple Preview](./vector_db_extension.png)
+### Create New Database
+![Create New Database](create_new_db-1.png)
+
 ### Vendor Selection
-#### Expanded View
-![Vendor selection chroma and milvus](./vdb_compare2.png)
-![Vendor selection chroma and milvus](./vdb_compare3.png)
+![Vendor Selection](vendor_selection.png)
 
 ### Chroma local connection pane
 ![Chroma Local Connection](./chroma_local_connection.png)
-#### Expanded View
-![Chroma Local Connection](./chroma_local_connection1.png)
-![Chroma Local Connection](./chroma_local_connection2.png)
 
+### Review Configuration
+![Review Configuration](review.png)
+
+## Data Source Management Interface
+![Data Source Management](data_source_management-1.png)
+
+### Configure Sources
+![Configure Sources](configure_sources.png)
+
+### Source Detailed View
+![Source Detailed View](source_detail-1.png)
+
+### Preview and Verify
+![Preview and Verify](preview_and_verfiy-1.png)
+
+### Chunking strategy 
+![Chunking strategy](chunking_strategy-1.png)
+
+### Process Documents
+![Process Documents](process_documents-1.png)
 
 ## Chat with Vector Database
 ![Chat with Vector Database](./chat.png)

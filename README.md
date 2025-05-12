@@ -1,6 +1,10 @@
+# AI Developer Experience [Concept for Ideation]
+
 This initiative focuses on establishing a comprehensive developer experience specifically designed for the creation of Generative AI applications, distinct from foundational model development and predictive AI implementations. Within the Generative AI application development lifecycle, a locally hosted model environment is generally essential for facilitating rigorous testing, streamlined prompt engineering, and effective experimentation with model outputs and contextual strategies.
 
 The following outlines a non-exhaustive suite of capabilities required to support this developer experience, with the objective of enabling a localized development workflow prior to integration with frameworks such as Langchain, LangGraph, or Crew AI. The strategic intent for this concept is to identify and rapidly implement initial high-value features for market introduction, followed by continuous capability expansion.
+
+The ideation of these comcepts have assumed the following components will be developed VS code extensions.
 
 **Key Capability Areas:**
 
