@@ -1,100 +1,224 @@
 # Model Management [Draft for ideation]
-![Model Management](./model_management.png)
-
-## Core components
-
-### Model Manager
-- Downloads models via Ollama
-- Lists available/downloaded models
-- Manages model selection
-- Controls model serving (start/stop)
-- Monitors model status
-
-### API Integration
-- Connects to Ollama's API endpoints
-- Provides API endpoint information to users
-- Allows testing API connections
-
-### UI Components
-- Sidebar view for managing models
-- Status bar indicator for active models
-- Command palette integration
-- Settings panel
-
-## VS Code Ollama Plugin - High Level Design 
-### Core Features
-- Download: Users can search and download models directly from the Ollama registry
-- Selection: Users can browse locally downloaded models and select one to activate
-- Serving: Start/stop model serving with clear status indicators
-- Status monitoring: See which models are running with memory usage stats
-
-### API Integration
-- Endpoint display: Shows the API endpoint URL for the running model
-- Testing: Ability to test the API endpoint directly from VS Code
-- Configuration: Port settings and other API parameters
-
-### UI Components
-- Sidebar extension: Quick access to model list and controls
-- Status bar indicator: Shows currently running models at a glance
-- Detailed view: In-depth model information and management in the main panel
-
-### High Level Technical Architecture
-### Backend
-#### Ollama CLI Integration
-- Interfaces with Ollama's command-line API for model management
-- Executes commands like ollama pull, ollama list, ollama run
+![Model Management](./ollama_service_management.png)
 
 
-#### API Communication
-- Connects to Ollama's REST API (typically on port 11434)
-- Handles requests/responses for model operations and inference
+## Core Components
 
+### 1. Service Manager
+- **Primary Function**: Control Ollama service lifecycle (start/stop)
+- **Status Monitoring**: Track service running state and health
+- **Port Management**: Monitor service on port 11434
+- **Service Information**: Display Ollama version (v0.2.12)
 
-#### Settings Management
-- Stores user preferences and model configurations
-- Manages paths and system resources
+### 2. Model Manager
+- **Model Discovery**: Browse available models from registry
+- **Local Model Display**: Show downloaded models with "Available" status
+- **Model Operations**: Download, view details, and manage models
+- **Model Metadata**: Track size, parameters, and descriptions
 
+### 3. API Gateway
+- **Endpoint Management**: Expose API at http://localhost:11434/api/generate
+- **Connection Testing**: Verify API accessibility
+- **Health Monitoring**: Check service responsiveness
+- **Request Routing**: Handle API communication
 
+### 4. UI Controller
+- **Sidebar Management**: Display model list and service actions
+- **Main Panel**: Show model details and download interface
+- **Status Bar**: Present service status and port information
+- **Event Handling**: Process user interactions
 
-### Frontend
+## High-Level Design
 
-#### VS Code Extension API
-- Registers commands, views, and UI components
-- Creates TreeView for model listing
-- Implements WebView panels for detailed interactions
+### Architecture Pattern
+- **Service-Centric Design**: Focus on Ollama service rather than individual models
+- **Unified Model State**: All models show "Available" status regardless of loading state
+- **Centralized Control**: Single service controls all model operations
+- **Real-time Monitoring**: Continuous service status updates
 
+### Key Design Decisions
+- **Service State**: Binary (Running/Stopped) instead of per-model states
+- **Model Status**: Simplified to "Available" for all downloaded models
+- **Control Granularity**: Service-level rather than model-level control
+- **Status Display**: Prominent service state indicators
 
-#### User Interface
-- Model listing with status indicators
-- Control buttons for common operations
-- Detailed model information panel
-- Download interface with model browsing
+## Technical Architecture
 
+### Backend Services
 
+#### Service Management Layer
+```
+ServiceManager
+├── startService()
+├── stopService()
+├── getServiceStatus()
+├── monitorHealth()
+└── getServiceInfo()
+```
 
-### User Workflow
+#### Model Management Layer
+```
+ModelManager
+├── listAvailableModels()
+├── downloadModel()
+├── getModelMetadata()
+├── refreshModelList()
+└── getModelDetails()
+```
 
-#### Initial Setup
+#### API Layer
+```
+ApiClient
+├── testConnection()
+├── getEndpointInfo()
+├── checkHealth()
+├── makeRequest()
+└── handleResponse()
+```
 
-- User installs VS Code extension
-- Extension checks for Ollama installation, prompts if missing
-- User configures basic settings (storage location, etc.)
+### Frontend Architecture
 
+#### VS Code Integration
+```
+Extension
+├── TreeView Provider (Sidebar)
+├── WebView Panel (Main Content)
+├── Status Bar Provider
+├── Command Palette
+└── Configuration Handler
+```
 
-#### Model Management
-- Browse available models in the registry
-- Download selected models with progress indication
-- View locally available models in sidebar
+#### Component Structure
+```
+Main Component
+├── Activity Bar (Server Icon)
+├── Sidebar
+│   ├── Model List
+│   └── Service Actions Panel
+├── Main Content
+│   ├── Model Details Panel
+│   └── Download Section
+└── Status Bar
+```
 
+## User Workflow
 
-#### Runtime Operations
-- Start/stop models with a single click
-- Monitor running model status
-- Get API endpoint information
-- Test connection directly from VS Code
+### Service Management Flow
+```
+1. User opens VS Code with Ollama extension
+   ├── Extension checks service status
+   └── Displays current state in sidebar
 
+2. Start Service
+   ├── User clicks "Start Ollama Service"
+   ├── Service launches on port 11434
+   ├── Status updates to "Running"
+   └── Models become accessible
 
-#### Development Integration
-- Copy API endpoint information for use in code
-- Quick access to documentation
-- Potential for code snippets integration
+3. Stop Service
+   ├── User clicks "Stop Ollama Service"
+   ├── Service shuts down
+   ├── Status updates to "Stopped"
+   └── Models become unavailable
+```
+
+### Model Management Flow
+```
+1. Browse Models
+   ├── View available downloaded models
+   ├── See "Available" status for all
+   └── Select model for details
+
+2. Download Models
+   ├── Click "Add Model"
+   ├── Search in registry
+   ├── Select from popular models
+   ├── Monitor download progress
+   └── Model appears in list
+
+3. Model Operations
+   ├── View model details
+   ├── Check API endpoint
+   ├── Test model connection
+   └── Access model metadata
+```
+
+### API Integration Flow
+```
+1. Service Connection
+   ├── Service running on localhost:11434
+   ├── API endpoint at /api/generate
+   └── Health check available
+
+2. API Testing
+   ├── User clicks "Test API"
+   ├── Extension sends health request
+   ├── Results displayed
+   └── Status updated
+
+3. Model Interaction
+   ├── Models accessible via API
+   ├── Endpoint remains constant
+   ├── Request routing handled automatically
+   └── Response processing managed
+```
+
+## Key Architectural Decisions
+
+### Service-Level Abstraction
+- **Rationale**: Ollama manages model loading internally
+- **Benefit**: Simplified user mental model
+- **Implementation**: Single service state instead of multiple model states
+
+### Unified Model Status
+- **Rationale**: All downloaded models are accessible when service runs
+- **Benefit**: Consistent user experience
+- **Implementation**: "Available" status for all local models
+
+### API Standardization
+- **Rationale**: Single endpoint for all model interactions
+- **Benefit**: Simplified integration for developers
+- **Implementation**: Fixed endpoint at localhost:11434/api/generate
+
+### Real-time Status Monitoring
+- **Rationale**: Users need immediate feedback
+- **Benefit**: Clear system state awareness
+- **Implementation**: Status bar and sidebar indicators
+
+## Data Flow
+
+### Service Status Flow
+```
+Service Process → Monitor → Service Manager → UI Controller → Status Display
+```
+
+### Model Data Flow
+```
+Ollama Registry → Download Manager → Local Storage → Model Manager → UI Display
+```
+
+### API Communication Flow
+```
+VS Code → API Client → Service Endpoint → Ollama → Response → UI Update
+```
+
+## Integration Points
+
+### VS Code Extension API
+- **TreeView**: Model listing and actions
+- **WebView**: Detailed interfaces
+- **StatusBar**: Service status display
+- **Commands**: Service control actions
+
+### Ollama Service
+- **CLI Interface**: Service management
+- **REST API**: Model operations
+- **File System**: Model storage
+- **Process Management**: Service lifecycle
+
+### User Interface
+- **Activity Bar**: Extension activation
+- **Sidebar**: Primary controls
+- **Main Panel**: Detailed operations
+- **Status Bar**: Quick status view
+
