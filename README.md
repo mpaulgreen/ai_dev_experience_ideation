@@ -4,8 +4,9 @@ The following outlines a non-exhaustive suite of capabilities required to suppor
 
 **Key Capability Areas:**
 
-* **Local Model Management:**
+* **Local Model Management:**[]
     * Provisioning and management of local model serving frameworks (e.g., Ollama).
+    * [Model Management](https://github.com/mpaulgreen/ai_dev_experience_ideation/blob/main/model_management_ideation.md)
 * **Data Preprocessing:**
     * Tools for data preparation and transformation.
     * Mechanisms for data quality assurance.
@@ -14,6 +15,7 @@ The following outlines a non-exhaustive suite of capabilities required to suppor
     * Local vector storage solutions.
     * Integrated embedding generation pipelines.
     * Functionality for semantic similarity searching.
+    * [Vector Database](https://github.com/mpaulgreen/ai_dev_experience_ideation/blob/main/vectordb_userflow.md)
 * **Prompt Development:**
     * Centralized management of prompt templates.
     * Version control for prompt iterations.
