@@ -1,4 +1,4 @@
-# Model Management [Draft for ideation]
+# Model Management [Concept for ideation]
 ![Model Management](./ollama_service_management.png)
 
 
