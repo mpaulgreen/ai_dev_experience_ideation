@@ -30,3 +30,5 @@ The ideation of these comcepts have assumed the following components will be dev
     * Human-in-the-loop evaluation workflows.
     * Curated benchmark datasets relevant to specific application scenarios.
     * Mechanisms for assessing and scoring response quality.
+
+### Note: The included mockups are for ideation purposes only. Detailed design and architecture will be developed upon implementation selection.
