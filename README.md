@@ -8,7 +8,7 @@ The ideation of these comcepts have assumed the following components will be dev
 
 **Key Capability Areas:**
 
-* **Local Model Management:**[]
+* **Local Model Management:**
     * Provisioning and management of local model serving frameworks (e.g., Ollama).
     * [Model Management](https://github.com/mpaulgreen/ai_dev_experience_ideation/blob/main/model_management_ideation.md)
 * **Data Preprocessing:**
