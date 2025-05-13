@@ -25,13 +25,13 @@
 ![Configure Sources](configure_sources.png)
 
 ### Source Detailed View
-![Source Detailed View](source_detail-1.png)
+![Source Detailed View](source_detail.png)
 
 ### Preview and Verify
 ![Preview and Verify](preview_and_verfiy-1.png)
 
 ### Chunking strategy 
-![Chunking strategy](chunking_strategy-1.png)
+![Chunking strategy](chunking_strategy.png)
 
 ### Process Documents
 ![Process Documents](process_documents-1.png)
