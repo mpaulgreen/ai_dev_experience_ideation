@@ -52,5 +52,5 @@ Prioritizing the establishment of local prompt management, a vector database, an
 - [Model Management](https://github.com/mpaulgreen/ai_dev_experience_ideation/blob/main/model_management_ideation.md)
 - [Vector Database](https://github.com/mpaulgreen/ai_dev_experience_ideation/blob/main/vectordb_ideation.md)
 - [Local Model Capability Assessment](https://github.com/mpaulgreen/granite-model-capabilities)
-
+- Prompt Management - In Progress
 **Note: The included mockups are for ideation purposes only. Detailed design and architecture will be developed upon implementation selection.**
