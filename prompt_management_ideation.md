@@ -10,6 +10,8 @@
 * **Release Labels:** Enables the management of prompts across different environments (e.g., production, staging) by applying release labels to specific versions.
 
 ![Prompt Registry](./prompt_registry.png)
+
+
 ![Version History](./version_history.png)
 
 
@@ -17,17 +19,22 @@
 
 * **Interactive Prompt Testing:** Offers a playground environment where users can test prompts against different models and parameters.
 * **Model Comparison:** Enables testing the same prompts across different LLM models to compare their outputs.
-* **A/B Testing:** Facilitates the gradual release of new prompt versions and allows for comparison of their performance metrics.
-* **Evaluation:** Provides tools to rigorously test prompts before deployment using both automated metrics and human graders.
-* **Batch Testing:** Allows running prompts against datasets (historical or synthetic) to backtest, identify regressions, and validate updates.
+* **A/B Testing:** [After_Initial_Release] Facilitates the gradual release of new prompt versions and allows for comparison of their performance metrics.
+* **Evaluation:** [After_Initial_Release] Provides tools to rigorously test prompts before deployment using both automated metrics and human graders.
+* **Batch Testing:** [After_Initial_Release] Allows running prompts against datasets (historical or synthetic) to backtest, identify regressions, and validate updates.
 
-**Collaboration:** [Pending]
+![Prompt Playround](./prompt_playground.png)
+
+
+![Model Comparison](./model_comparison.png)
+
+**Collaboration:** [After_Initial_Release]
 
 * **Team Workspaces:** Supports team-based development with the ability to add members, assign roles, and share dashboards.
 * **Access Control:** Allows control over who can edit prompts.
 * **Sharing:** Enables sharing of entire dashboards or specific data segments with team members.
 
-**Observability & Monitoring:** [Pending]
+**Observability & Monitoring:** [After_Initial_Release]
 
 * **Request Logging:** Automatically logs all requests and responses made to LLM providers (like OpenAI) through the PromptLayer integration.
 * **Metadata Tracking:** Records relevant metadata associated with each API request, such as the prompt used, response, and parameters.
