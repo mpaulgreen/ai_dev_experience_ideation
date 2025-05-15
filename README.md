@@ -51,8 +51,9 @@ Prioritizing the establishment of local prompt management, a vector database, an
 **Refer:**
 - [Model Management](https://github.com/mpaulgreen/ai_dev_experience_ideation/blob/main/model_management_ideation.md)
 - [Vector Database](https://github.com/mpaulgreen/ai_dev_experience_ideation/blob/main/vectordb_ideation.md)
+- [Prompt Development and Management](https://github.com/mpaulgreen/ai_dev_experience_ideation/blob/main/prompt_management_ideation.md)
 - [Local Model Capability Assessment](https://github.com/mpaulgreen/granite-model-capabilities)
-- Prompt Management - In Progress
+
 
 **Please note:** The formulation of this concept assumes implementation as a VS Code extension, recognizing its prevalence within the AI development community. Although the underlying capabilities are designed for potential adaptation to other plugin architectures, the current conceptualization of vector database and model serving relies on specific vendor or product implementations for development expediency. Future porting to alternative solutions is expected, but a comprehensive survey of all available vendors and products was not undertaken within the present timeframe.
 
