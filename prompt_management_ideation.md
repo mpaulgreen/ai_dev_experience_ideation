@@ -1,4 +1,4 @@
-# High Level Capabilities needed for Prompt Development and Management
+# High Level Capabilities needed for Prompt Development and Management locally
 
 **Prompt Registry:**
 
