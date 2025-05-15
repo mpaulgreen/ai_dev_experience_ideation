@@ -19,25 +19,7 @@
 
 * **Interactive Prompt Testing:** Offers a playground environment where users can test prompts against different models and parameters.
 * **Model Comparison:** Enables testing the same prompts across different LLM models to compare their outputs.
-* **A/B Testing:** [After_Initial_Release] Facilitates the gradual release of new prompt versions and allows for comparison of their performance metrics.
-* **Evaluation:** [After_Initial_Release] Provides tools to rigorously test prompts before deployment using both automated metrics and human graders.
-* **Batch Testing:** [After_Initial_Release] Allows running prompts against datasets (historical or synthetic) to backtest, identify regressions, and validate updates.
-
 ![Prompt Playround](./prompt_playground.png)
 
 
 ![Model Comparison](./model_comparison.png)
-
-**Collaboration:** [After_Initial_Release]
-
-* **Team Workspaces:** Supports team-based development with the ability to add members, assign roles, and share dashboards.
-* **Access Control:** Allows control over who can edit prompts.
-* **Sharing:** Enables sharing of entire dashboards or specific data segments with team members.
-
-**Observability & Monitoring:** [After_Initial_Release]
-
-* **Request Logging:** Automatically logs all requests and responses made to LLM providers (like OpenAI) through the PromptLayer integration.
-* **Metadata Tracking:** Records relevant metadata associated with each API request, such as the prompt used, response, and parameters.
-* **Analytics Dashboard:** Provides a centralized view of LLM usage, including cost, latency statistics, and trends over time, broken down by feature or model.
-* **Advanced Search:** Enables searching through the request history using metadata, tags, or keywords to triage errors and identify patterns.
-* **Tracing:** Offers capabilities to visualize the execution flow of applications, track LLM requests, measure durations, and inspect inputs/outputs.
