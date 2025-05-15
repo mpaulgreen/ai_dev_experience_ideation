@@ -23,3 +23,6 @@
 
 
 ![Model Comparison](./model_comparison.png)
+
+
+**Note:** While the scope of prompt development and management capabilities extends beyond the current proposal, features deemed more suitable for a hosted solution have been intentionally excluded from this local implementation concept. Additional capabilities will be evaluated and incorporated as appropriate during the architectural and design phase.
